@@ -13,7 +13,7 @@ BASHRC="~/.bashrc"
 # Install zlib
 v=1.2.8  
 wget ftp://ftp.unidata.ucar.edu/pub/netcdf/netcdf-4/zlib-${v}.tar.gz
-tar -xf zlib-${v}.tar.gz && cd zlib-${v}
+tar -xvzf zlib-${v}.tar.gz && cd zlib-${v}
 ./configure --prefix=/usr/local
 #sudo make check install
 sudo make install
@@ -22,7 +22,7 @@ cd ..
 # Install HDF5
 v=1.8.13
 wget ftp://ftp.unidata.ucar.edu/pub/netcdf/netcdf-4/hdf5-${v}.tar.gz
-tar -xf hdf5-${v}.tar.gz && cd hdf5-${v}
+tar -xvzf hdf5-${v}.tar.gz && cd hdf5-${v}
 prefix="/usr/local/hdf5-$v"
 if [ $HDF5_DIR != $prefix ]; then
     echo "Add HDF5_DIR=$prefix to .bashrc"
@@ -38,7 +38,7 @@ cd ..
 # Install Netcdf
 v=4.1.3
 wget http://www.unidata.ucar.edu/downloads/netcdf/ftp/netcdf-${v}.tar.gz
-tar -xf netcdf-${v}.tar.gz && cd netcdf-${v}
+tar -xvzf netcdf-${v}.tar.gz && cd netcdf-${v}
 prefix="/usr/local/"
 if [ $NETCDF4_DIR != $prefix ]; then
     echo "Add NETCDF4_DIR=$prefix to .bashrc"
